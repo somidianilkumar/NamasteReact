@@ -1,0 +1,20 @@
+1. CDN links for react- used to inject react into our project
+2.  linking css file- insdie header - <link rel="stylesheet" href="./index.css" >
+linking js file - insde body- <script src="./App.js" > </script>
+
+Library vs Framework:
+ 
+ Library
+    -predefined funtions stored locally or globally  so that funtions we can use in in our project
+    -  we can build full scale application or we can use react to change specific block in webpage
+    - React is a Library
+
+Framework
+    - full setup that complete app can be build on top it.
+    - frame work has full setup, full of rules and architecture
+    - next js and angular js are frameworks
+
+
+
+
+    
