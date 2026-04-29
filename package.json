@@ -1,0 +1,26 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "this is react practice",
+  "homepage": "https://github.com/somidianilkumar/NamasteReact#readme",
+  "bugs": {
+    "url": "https://github.com/somidianilkumar/NamasteReact/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somidianilkumar/NamasteReact.git"
+  },
+  "license": "ISC",
+  "author": "Anilkumar",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}
