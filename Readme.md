@@ -30,7 +30,7 @@
 - provide necessary data and at the end it will create **package.json** file
 - package.json is configuration file for npm
 
-# NVM
+## NVM
 - NVM stands for node version manager
 - We can install NVM from its website
 - NVM used to install/manage node versions in local
@@ -72,3 +72,41 @@ CDN links are not best way to bring react into our project, we can directly inst
 - Https- host on https
 - Tree shaking - remove unused code
 - Different Dev build  and prod build
+
+# Episode 3
+- we can use scripts to run commands instead direclty running parcel like this "npm parcel index.html".
+- update scripts in package.json: {"scripts":{
+    "start" : "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+}}
+- now we run as **npm  run start** or **npm start** to run our application. but for other scripts run in mandatory, for only start we can ommit run
+- React.Element is very difficult to use for larger web pages because its involves lot of nesting. so we use JSX to make it simple.
+
+## jSX
+- JSX is HTML-like syntax
+- JSX is not HTML inside javascript
+- JSX is HTML/HML-like syntax(but there are some noticeble differences)
+- JSX is not part of React
+
+- Ex: const jsx heading=<h1 namasthe jsx </h1
+- jsx heading nothing but react element(object)
+- Babel is responsible for converting JSX into react elements
+- Babel in javascript compiler of transpiler
+- JSX will not be understood by js engine
+- if there are multiples jsx syntax, we have to keep inside paranthesis().
+
+**JSX => React.createElement => react element(object) => HTML element(renders in browser)**
+ 
+ ## React component
+ - Class component and funtional components
+ - functional components nothing but normal javascript funtions which return jsx
+ - function name should be pascal case
+ - functional component can be render using: root.render(<Component />);
+ - component composition is nothing but using one component inside another component
+ - variables also can be used inside jsx using {}, all the javascript expresstion can be used inside {}, 
+ - Ex: {Title()}, {paragraph}
+ - JSX is converted to react elements using barbel.
+
+
+   
