@@ -108,5 +108,12 @@ CDN links are not best way to bring react into our project, we can directly inst
  - Ex: {Title()}, {paragraph}
  - JSX is converted to react elements using barbel.
 
+# Episode 4
+- props: props are nothing but passing arguments to funtion, we pass props to functional component
+- for looping always use map, filter and reduce funtion
+- use key when looping anything using list
+- ex: list.map((restaurant)=>(<Component key={} object={object}>));
+- components are really a good things, we can reuse
+-
 
    
