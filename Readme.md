@@ -116,4 +116,54 @@ CDN links are not best way to bring react into our project, we can directly inst
 - components are really a good things, we can reuse
 -
 
+# Episode 5
+Foodie app plan:
+/**
+ * Header
+ * - Logo (H)\
+ * - Nav Items (4-5)
+ * - Cart Icon
+ * Body
+ * - Search Bar
+ * - RestaurantContainer
+ *     - Restaurant Card
+ *        - Image
+ *        - Name
+ *        - Star Rating
+ *        - Cusines
+ *        - Delivery Time
+ * Footer
+ * - Links
+ * - Copyright
+ * - Address
+ * - Contact
+ */
+
+ ## config driven UI
+ Config driven UI is a design approch where the UI structure and behaviour are controlled by external configuration(usually JSON from backend) instead of hardcoded components.
+
+ - The best practise in project is to keep separate files for different folders
+ -  we can name components files name with js or ts or jsx or tsx . it doesnot matter. it works same way
+ 
+## Types of exports and imports
+1. Default exports and imports
+   - default export:
+      const Header=()=> {}; export default Header;
+   - default import:
+      import Header from "path";
+2. Named exports and imports
+   - named export:
+      export const ABC="";
+      export const XYX="";
+   - named imports:
+      import {ABC, XYZ} from "path";
+
+## Hooks
+- Hooks are special functions in react that lets you use features like state and lifecycle inside functional components
+- UseState:useState is a hook that lets you to add and manage state in a functional component.
+- Ex: const[listOfRest, setListOfRest]=useState(<pass default variable for listOfRest>);
+- usestate nothing but funtion which returns arrat of 2 (object/variable and funtion to update variable )
+
+
+
    
