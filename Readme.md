@@ -164,6 +164,18 @@ Foodie app plan:
 - Ex: const[listOfRest, setListOfRest]=useState(<pass default variable for listOfRest>);
 - usestate nothing but funtion which returns arrat of 2 (object/variable and funtion to update variable )
 
+# Episode 6
+- monolith and microservices architecture
+- 2 approches how UI get data from backend
+   1. Load page => API call => Render (slow page looks empty till data loads)
+   2. Load page => Render => API call => Re- Render ( intial render , when data comes , renders actual data)
+- useEffect: takes 2 arguments 1. callback function, and depedencies array.
+- useEffect is used to for api calling and side effects, useEffect is executed after component is rendered.
+- Watch video about CORS
+- we can use Loading... or Spinner image, till data comes from backend but its not good practise.
+- Shimmer UI: Shimmer UI resembles the actual UI, so users will understand how quickly the web or mobile app will load even before content has shown up
+- when we update any value in any component , whole component re-renders but only changed value is updated in DOM and modified
+- implimeneted search funtionality
 
 
    

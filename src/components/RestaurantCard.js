@@ -1,24 +1,26 @@
+import { Restaurant_IMAGE_URL } from "../utils/constants";
+
 const RestaurantCard = (props) => {
   const {
     name,
     cuisines,
     avgRating,
     cloudinaryImageId,
-    deliveryTime,
+    sla: { deliveryTime,slaString },
     costForTwo,
-  } = props.restObject?.data || {};
+  } = props.restObject?.info || {};
   return (
     <div className="restaurant-card" style={{ backgroundColor: "#f0f0f0" }}>
       <img
         className="restaurant-logo"
-        src={cloudinaryImageId}
+        src={Restaurant_IMAGE_URL + cloudinaryImageId}
         alt="restaurant-logo"
       />
       <h3>{name}</h3>
       <h4>{avgRating} Stars</h4>
       <h4>{cuisines.join(", ")}</h4>
-      <h4>{deliveryTime} mins</h4>
-      <h4>₹{costForTwo / 100} for two </h4>
+      <h4>{slaString}</h4>
+      <h4>{costForTwo} </h4>
     </div>
   );
 };
