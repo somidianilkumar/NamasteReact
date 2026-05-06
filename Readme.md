@@ -177,5 +177,6 @@ Foodie app plan:
 - when we update any value in any component , whole component re-renders but only changed value is updated in DOM and modified
 - implimeneted search funtionality
 
-
-   
+# Episode 6.1 and 6.2
+- Fixing swiggy api issue or updating UI as for new json format returning by swiggy
+- fixing CORS issue using "corproxy.io" website
