@@ -180,3 +180,31 @@ Foodie app plan:
 # Episode 6.1 and 6.2
 - Fixing swiggy api issue or updating UI as for new json format returning by swiggy
 - fixing CORS issue using "corproxy.io" website
+
+# Episode 7
+## useEffect
+1. syntax: useEffect(callbackfuntion,[dependency array])
+2. useEffect(()=>{},[]), dependency array is optional
+3. when we dont pass depedency array, useEffect is called everytime, correspoding component is rendered
+4. when we pass empty depedency array, only on first render of component useEffect is called
+5. when we pass any values inside depedency array, whenever value inside dependency changes, useEffect is called.
+
+## useState
+1. Never create state variable using useState outside functional component
+2. use only inside functional component
+3. use useState at top , inside functional component
+4. never use UseState inside conditional block(if else , while), for loop and functions inside component.
+
+## Routing
+- we have to install package "npm install react-router-dom@6", we have latest 7, for practise purpose using v6
+- import {createBrowserRouter, RouterProvider} from "react-router-dom";
+- createBrowserRouter used to create create configuration. createBrowserRouter method takes array of objects, each object format is: {path:"/", element:<AboutUs/>, errorElememt:<Error/>}
+- RouterProvider will be used to render page based on configuration
+- for error details for particular url. **useRouteError** Hook to capture details
+- **children routing**:  when we want to make header constant and only render particular components within a page, we can use children routing.
+- we can make use of Outlet component from react-router-dom.
+- React is a single page application, all routes and moments happens inside single page.
+- dynamic routing, using Id as dynamic id
+- **useParams** hook from react-router-dom to get dynamic Id from url or path
+- <Link to={"resturants/"+id}>component or link </Link>, used to create links in react
+- import Link from react-router-dom
