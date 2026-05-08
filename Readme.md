@@ -205,4 +205,6 @@ Foodie app plan:
 - we can make use of Outlet component from react-router-dom.
 - React is a single page application, all routes and moments happens inside single page.
 - dynamic routing, using Id as dynamic id
-- useParams hook from react-router-dom to get dynamic Id from url or path
+- **useParams** hook from react-router-dom to get dynamic Id from url or path
+- <Link to={"resturants/"+id}>component or link </Link>, used to create links in react
+- import Link from react-router-dom
