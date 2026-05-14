@@ -355,3 +355,10 @@
         font-size: 16px;
     }
 }
+
+.aboutus-card{
+    border: 1px solid #2e3b69;
+    border-radius: 22px;
+    padding: 10px;
+    margin: 10px;
+}

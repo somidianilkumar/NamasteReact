@@ -208,3 +208,55 @@ Foodie app plan:
 - **useParams** hook from react-router-dom to get dynamic Id from url or path
 - <Link to={"resturants/"+id}>component or link </Link>, used to create links in react
 - import Link from react-router-dom
+
+# Episode 8
+ ## class based compnents
+ - syntax: class Name Extends React.Component {
+   constructor(props){
+      super(props);
+      this.state={count:0, count2:0};
+   }
+   render (){
+      return(<jsx>)
+   }
+ }
+ - this.state ={count:0,count2:2}: creating state variables in class based components
+ - this.setState(), is used to updated state variables, it takes object as argument
+ - ex: this.setState({count:this.state.count+1});
+## componentDidMount()
+- componentDidMount() method is called after successfully mounting/rendering component
+- it is used to make API cals, it is similar to useEffect in functional components,that means, it will be called after rendering the component.
+- First constructor is called, then render method is called and after loading component successfully, componentDidMount() method is called.
+- we can make it async to call apis inside
+## componentDidUpdate
+- componentDidUpdate is called when setState method is called or new props are came or force update is used
+- it is part of updating lifecycle
+## componentWillUnmount
+- this mehtod is called just before unmounting component,like moving to another page
+- this is part of unmounting cycle
+- this method is used to clear interval or anyother thing(clearInterval(this.timer))
+- we can use return function in useEffect, to unmount the omponent similar way we did for class based components
+## react life cycle diagram
+- Parent constructor
+- Parent Render method is called
+    - Child 1 constructor is called
+    - child 1 render method is called
+
+    - child 2 constructor is called
+    - chiled 2 render method is called
+
+    - child 1 componentDidMount is called
+      - we can make api calls here and update state using setState Method
+      - once we update state variables, componentDidUpdate Method is called
+    - Child 2 ComponentDidMount is called
+
+- Parent componentDidMount method is called
+- if we update any state variables, componentDidUpdate inside parent component is called
+
+## Questions
+- setInterval vs setTimout
+- clearInterval
+- why super(props)
+- why exaclty is componentwillUnmount method is used 
+
+
