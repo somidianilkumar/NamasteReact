@@ -1,7 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import Shimmer from "./Shimmer";
 import { Link,useParams } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import DinoGame from "./DinoGame";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -25,6 +27,8 @@ const params = useParams();
       json?.data?.cards[1]?.card?.card.gridElements?.infoWithStyle?.restaurants,
     );
   };
+ const onlineStatus = useOnlineStatus();
+ if (onlineStatus === false) return <DinoGame />;
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />

@@ -1,25 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { RESTAURANT_MENU_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import { resData } from "../utils/LuckyRestData";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [RestaurantMenu, setRestaurantMenu] = useState(null);
   const { restId } = useParams();
   console.log(restId);
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    // commenting below code to avoid CORS error. We will use mock data for now.
-    // const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.3684881&lng=78.5458548&restaurantId=${restId}&catalog_qa=undefined&submitAction=ENTER`);
-    // const json = await data.json();
-    console.log(resData);
-    setRestaurantMenu(resData);
-  };
-    if (!RestaurantMenu) return <Shimmer />;
+const restaurantData=useRestaurantMenu();
+    if (!restaurantData) return <Shimmer />;
 
   const {
     name,
@@ -29,11 +19,10 @@ const RestaurantMenu = () => {
     costForTwoMessage,
     locality,
     sla,
-  } = RestaurantMenu?.data?.cards[2]?.card?.card?.info || {};
+  } = restaurantData?.data?.cards[2]?.card?.card?.info || {};
 
-  console.log(RestaurantMenu.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
 
-  const menuItems = RestaurantMenu.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || [];
+  const menuItems = restaurantData.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards || [];
 
 
   const ratingsText = totalRatingsString
