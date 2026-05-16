@@ -259,4 +259,17 @@ Foodie app plan:
 - why super(props)
 - why exaclty is componentwillUnmount method is used 
 
+# Episode 9
+## Customs hooks
+- Hooks are utility functions that provide some features
+- custom hooks also some utility functions
+- customs hooks called before initial render, not like useEffect which is called after intial render
+## Lazy loading or on Demand loading or Dynamic Bundling or Chunking or code splitting
+- Bundler will combine all files into single file and load on page, some times single file becomes heavy to load application
+- so we split components into small bundlers , that will be loaded on demand only
+- instead of direclty importing component from other file, we can something like const Grocery=lazy(()=> import(path));
+- Grocery can be used wherever requiredf, we can wrao Grocery inside Suspense if page or file loading takes time we can give fallback page
+- Ex: <Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>
+
+
 
